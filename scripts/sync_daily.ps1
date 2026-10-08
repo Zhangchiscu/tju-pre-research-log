@@ -1,4 +1,4 @@
-﻿param(
+param(
     [string]$Day = (Get-Date -Format "yyyy-MM-dd")
 )
 
@@ -34,19 +34,12 @@ if (Test-Path $notes) {
 }
 
 if ($files.Count -eq 0 -and !$noteText) {
-    Write-Host "[SKIP] No recorded work for $Day"
+    Write-Host "[INFO] No new logs; retrying pending GitHub uploads."
+    & git -C $repo push origin main
+    if ($LASTEXITCODE -ne 0) {
+        throw "GitHub upload failed; local commits remain saved."
+    }
     exit 0
-}
-
-# Do not mix unrelated local changes into automatic commits.
-$dirty = @(& git -C $repo status --porcelain)
-if ($LASTEXITCODE -ne 0 -or $dirty.Count -gt 0) {
-    throw "Research repository has uncommitted changes. Resolve them first."
-}
-
-& git -C $repo pull --ff-only origin main
-if ($LASTEXITCODE -ne 0) {
-    throw "Git pull failed."
 }
 
 New-Item -ItemType Directory -Force $evidence | Out-Null
@@ -146,13 +139,13 @@ if ($LASTEXITCODE -ne 0) {
     throw "Git add failed."
 }
 
-$changes = @(& git -C $repo diff --cached --name-only)
+$changes = @(& git -C $repo diff --cached --name-only -- @addPaths)
 if ($LASTEXITCODE -ne 0) {
     throw "Git diff failed."
 }
 
 if ($changes.Count -gt 0) {
-    & git -C $repo commit -m "logs: archive research progress $Day"
+    & git -C $repo commit --only -m "logs: archive research progress $Day" -- @addPaths
     if ($LASTEXITCODE -ne 0) {
         throw "Git commit failed."
     }
@@ -160,7 +153,7 @@ if ($changes.Count -gt 0) {
 
 & git -C $repo push origin main
 if ($LASTEXITCODE -ne 0) {
-    throw "Git push failed."
+    throw "GitHub upload failed; local commits remain saved. Retry later."
 }
 
 Write-Host "[SUCCESS] Research logs synchronized: $Day"
