@@ -1,0 +1,104 @@
+﻿{
+  "audit": "RoboDojo stack_bowls read-only static check",
+  "source_repo": "D:\\RoboDojo_Workspace\\RoboDojo",
+  "source_commit": "726e9aabfaa642203722eb126f5eaf0f37f3e1ad",
+  "checked_at_local": "2026-10-08T17:45:41+08:00",
+  "status": "PASS_STATIC_ONLY",
+  "check_count": 19,
+  "checks": [
+    "both tasks registered",
+    "both native eval counts are 25",
+    "robot configuration is dual_x5",
+    "robot dimensions are [6,6] + [1,1]",
+    "standard uses 3 labeled bowls",
+    "standard layout ranges verified",
+    "random variant changes bowl candidates",
+    "random variant config has 20 clutter placements",
+    "standard task step limit is 800",
+    "random task step limit is 800",
+    "success checks include stacking + robot origin",
+    "success stacking XY tolerance is 0.04",
+    "success bowl-axis thresholds are 45,45,45,7",
+    "task instruction is correct",
+    "exactly one process score declaration",
+    "score stages 15/100 with transition mode",
+    "score stages require open grippers",
+    "eval code has run_eval",
+    "sim config dt=0.004"
+  ],
+  "task": {
+    "name": "stack_bowls",
+    "variant": "stack_bowls_random",
+    "robot": "dual_x5",
+    "native_eval_count": 25,
+    "step_limit": 800,
+    "xy_threshold": 0.04,
+    "process_score_stages": [
+      15,
+      100
+    ],
+    "score_mode": "transition",
+    "standard_bowl_ids": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      8,
+      9,
+      10
+    ],
+    "random_bowl_ids": [
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "random_clutter_config_count": 20,
+    "initial_xy_ranges": {
+      "xlim": [
+        -0.45,
+        0.45
+      ],
+      "ylim": [
+        -0.25,
+        0.07
+      ],
+      "rotate_rand": false,
+      "relative_plane": "Table"
+    },
+    "observation_config": {
+      "collect_freq": 25,
+      "robot": {
+        "joint_states": true,
+        "world_ee_state": true
+      },
+      "vision": {
+        "approximate_depth": false,
+        "depth": false,
+        "intrinsic_matrix": false,
+        "extrinsic_matrix": false,
+        "shape": true
+      }
+    }
+  },
+  "source_sha256": {
+    "task/RoboDojo/config/_task.yml": "9279cdf2dd00bfcdc8e8299b0f044bb90807f430aea71633bed29ae6228a0e65",
+    "task/RoboDojo/config/stack_bowls.yml": "5e93ea39a8da85558665588f875cb68e8da8c08ef0630e19b57e085c6c8502ff",
+    "task/RoboDojo/config/stack_bowls_random.yml": "e5a87c16998da95c34e0dcb440a9e9cd7ee97e3f297505e37515cde05480984e",
+    "task/RoboDojo/tasks/stack_bowls.py": "3cf82fd569d3a52f16a61e88cbb4211184a88f9a52cafc4763276283c0126463",
+    "task/RoboDojo/tasks/stack_bowls_random.py": "881e34bbf494617c0ac60c66d3a422ac93d0719a1fb57d6afa3bea294589d53f",
+    "env_cfg/arx_x5.yml": "08734f93016a7e6a46e6a2426e854da1621c612bf8cd0b53be91d9da18987d49",
+    "env_cfg/robot/_robot_info.json": "ebc8cea2886074b6ad6563d93b5695859802284b671ccf49e754fe75aff41731",
+    "env_cfg/sim/sim_config.yml": "886e120aa993e95552b397263278d63feb5bc74b4e77255803ff9479905dfce4",
+    "src/eval_client/eval_env.py": "4a09b058f90bda1087233e4622c1236211d97e91e1dd98d6e32e8f6a5371a42d"
+  },
+  "not_tested": [
+    "Isaac Sim startup",
+    "Assets loading",
+    "physical robot control",
+    "success rate",
+    "actual _result.json / MP4"
+  ]
+}
