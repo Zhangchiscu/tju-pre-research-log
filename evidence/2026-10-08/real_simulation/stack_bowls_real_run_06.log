@@ -1,0 +1,188 @@
+[robodojo eval] policy_dir=/root/rivermind-data/RoboDojo/XPolicyLab/policy/demo_policy
+[robodojo eval] task=stack_bowls env_cfg=arx_x5 eval_num=1
+[33m[INFO] Using socket port: 44771[0m
+[MAIN] start server, policy_server_port=44771
+[34m[1m[CONNECTING][0m Policy server -> localhost:44771 (PID=104933, timeout=600s)
+[SERVER] policy=demo_policy, task=stack_bowls, policy_server_port=44771
+[32m[1m[CONNECTED][0m Policy server ready on localhost:44771 (PID=104933)
+[MAIN] start client, server=localhost:44771
+[CLIENT] policy=demo_policy, task=stack_bowls, server=localhost:44771
+[CLIENT] EVAL_ENV_TYPE=(default sim) -> sim
+[34m[CLIENT] Activating Conda environment: isaaclab[0m
+[34m[CLIENT] Connecting to server localhost:44771...[0m
+[34m[CLIENT] Watch for green [CONNECTED]; yellow [RECONNECT] means the client is retrying.[0m
+[INFO] PYTHONPATH=/root/rivermind-data/RoboDojo:/root/rivermind-data/RoboDojo/XPolicyLab:
+[INFO] policy transport = WebSocket (protocol: ws)
+[INFO] policy_server_url = ws://localhost:44771
+[INFO] device_id = 0 → CUDA_VISIBLE_DEVICES=0
+[INFO] eval_batch     = false
+[INFO] render_interval = 10
+[INFO] num_envs        = 10
+[eval_policy] ROBODOJO_RUN_ID=2026-10-08_21-04-04
+[main] PhysX monitor enabled=False (task=stack_bowls)
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /root/IsaacLab-v2.3.2/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/opt/conda/envs/isaaclab/lib/python3.11/site-packages/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /opt/conda/envs/isaaclab/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20261008_210404.log
+2026-10-08T13:04:05Z [278ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-08T13:04:05Z [278ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-08T13:04:06Z [2,009ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-10-08T13:04:06Z [2,011ms] [Warning] [carb.cudainterop.plugin] CUDA_VISIBLE_DEVICES environment variable is set.
+2026-10-08T13:04:06Z [2,011ms] [Warning] [carb.cudainterop.plugin] Note CUDA device enumeration and Omniverse device enumeration are different.
+2026-10-08T13:04:06Z [2,011ms] [Warning] [carb.cudainterop.plugin] Setting CUDA_VISIBLE_DEVICES can lead to undesired behavior or crashes.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.119.02    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 3090          | Yes: 0 |     | 24822   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2204      | 08b84fe3.. |
+|     |                                  |        |     |            | c1        |            |
+|=============================================================================================|
+| OS: 24.04.1 LTS (Noble Numbat) ubuntu, Version: 24.04.1, Kernel: 5.15.0-161-generic
+| Processor: AMD EPYC 7742 64-Core Processor
+| Bare Metal Cores: 128 | Bare Metal Logical Cores: 256
+| Core Usage Quota: 20
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 102400 | Free Memory: 98452
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2026-10-08T13:04:08Z [3,248ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-10-08T13:04:09Z [4,463ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-08T13:04:09Z [4,463ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-08T13:04:09Z [4,497ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-08T13:04:09Z [4,497ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-08T13:04:09Z [4,508ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-08T13:04:09Z [4,508ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-08T13:04:09Z [4,520ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-08T13:04:09Z [4,520ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-08T13:04:09Z [4,522ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-08T13:04:09Z [4,522ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-08T13:04:09Z [4,523ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-10-08T13:04:09Z [4,523ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-10-08T13:04:10Z [5,343ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-10-08T13:04:10Z [5,621ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-10-08T13:04:10Z [5,977ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+2026-10-08T13:04:13Z [8,941ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-10-08T13:04:14Z [9,164ms] [Warning] [omni.graph.core.plugin] Found duplicate of category 'Replicator' - was 'Annotators', adding 'Fabric Reader'
+2026-10-08T13:04:14Z [9,164ms] [Warning] [omni.graph.core.plugin] Category 'Replicator' not accepted on node type 'omni.replicator.core.FabricReader' in extension 'omni.replicator.core'
+2026-10-08T13:04:14Z [9,169ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+2026-10-08T13:04:21Z [16,224ms] [Warning] [omni.fabric.plugin] Warning: attribute viewportHandle not found for bucket id 9
+
+[main] eval_batch=false in XPolicyLab/policy/demo_policy/deploy.yml; forcing num_envs 10 -> 1
+2026-10-08T13:04:25Z [20,562ms] [Error] [curobo] Error loading cuda.core backend: No module named 'cuda.bindings.cynvvm'
+Traceback (most recent call last):
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/curobolib/backends/__init__.py", line 33, in _try_load_cuda_core_backend
+    import curobo._src.curobolib.backends.cuda_core_backend.dynamics as cc_dyn
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/curobolib/backends/cuda_core_backend/dynamics.py", line 17, in <module>
+    from curobo._src.curobolib.backends.cuda_core_backend.dynamics_config import (
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/curobolib/backends/cuda_core_backend/dynamics_config.py", line 12, in <module>
+    from cuda.core import LaunchConfig
+  File "/opt/conda/envs/isaaclab/lib/python3.11/site-packages/cuda/core/__init__.py", line 76, in <module>
+    from cuda.core import checkpoint, system, utils
+  File "/opt/conda/envs/isaaclab/lib/python3.11/site-packages/cuda/core/cu12/checkpoint.py", line 10, in <module>
+    from cuda.core._utils.cuda_utils import handle_return as _handle_cuda_return
+  File "cuda/core/_utils/cuda_utils.pyx", line 1, in init cuda.core._utils.cuda_utils
+ModuleNotFoundError: No module named 'cuda.bindings.cynvvm'
+Traceback (most recent call last):
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/curobolib/backends/__init__.py", line 33, in _try_load_cuda_core_backend
+    import curobo._src.curobolib.backends.cuda_core_backend.dynamics as cc_dyn
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/curobolib/backends/cuda_core_backend/dynamics.py", line 17, in <module>
+    from curobo._src.curobolib.backends.cuda_core_backend.dynamics_config import (
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/curobolib/backends/cuda_core_backend/dynamics_config.py", line 12, in <module>
+    from cuda.core import LaunchConfig
+  File "/opt/conda/envs/isaaclab/lib/python3.11/site-packages/cuda/core/__init__.py", line 76, in <module>
+    from cuda.core import checkpoint, system, utils
+  File "/opt/conda/envs/isaaclab/lib/python3.11/site-packages/cuda/core/cu12/checkpoint.py", line 10, in <module>
+    from cuda.core._utils.cuda_utils import handle_return as _handle_cuda_return
+  File "cuda/core/_utils/cuda_utils.pyx", line 1, in init cuda.core._utils.cuda_utils
+ModuleNotFoundError: No module named 'cuda.bindings.cynvvm'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/RoboDojo/src/eval_client/main.py", line 453, in <module>
+    main()
+  File "/root/rivermind-data/RoboDojo/src/eval_client/main.py", line 346, in main
+    env = create_eval_env(env_cfg, simulation_app, resume_state=resume_state)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/src/eval_client/eval_env.py", line 954, in create_eval_env
+    return EvalEnv(config, app, resume_state=resume_state, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/src/eval_client/eval_env.py", line 54, in __init__
+    super().__init__(config, app, **kwargs)
+  File "/root/rivermind-data/RoboDojo/task/RoboDojo/tasks/stack_bowls.py", line 7, in __init__
+    super().__init__(config, app, **kwargs)
+  File "/root/rivermind-data/RoboDojo/env/environment/task_env.py", line 22, in __init__
+    self.robot_manager = RobotManager(
+                         ^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/env/robot_manager/robot_manager.py", line 52, in __init__
+    self._setup_planner(robot)
+  File "/root/rivermind-data/RoboDojo/env/robot_manager/robot_manager.py", line 542, in _setup_planner
+    self.planner[robot.robot_name] = CuroboPlanner(
+                                     ^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/env/planner_manager/curobo_planner.py", line 78, in __init__
+    self.motion_planner.warmup(enable_graph=self.use_graph_planner, num_warmup_iterations=5)
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/motion/motion_planner.py", line 171, in warmup
+    goal_tool_poses = self.compute_kinematics(goal_state).tool_poses.as_goal()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/motion/motion_planner.py", line 131, in compute_kinematics
+    return self.trajopt_solver.compute_kinematics(state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/solver/solver_trajopt.py", line 158, in compute_kinematics
+    return self.core.compute_kinematics(state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/solver/solver_core.py", line 515, in compute_kinematics
+    return self.kinematics.compute_kinematics(state).clone()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/robot/kinematics/kinematics.py", line 198, in compute_kinematics
+    return self._forward(q, idxs_env=idxs_env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/isaaclab/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/robot/kinematics/kinematics.py", line 137, in _forward
+    KinematicsFusedFunction.apply(
+  File "/opt/conda/envs/isaaclab/lib/python3.11/site-packages/torch/autograd/function.py", line 575, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/curobolib/cuda_ops/kinematics.py", line 193, in forward
+    kinematics_cu.launch_kinematics_forward_spheres(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/curobolib/backends/__init__.py", line 207, in __getattr__
+    backends = get_backend()
+               ^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/curobolib/backends/__init__.py", line 167, in get_backend
+    _backend_name, _backend_modules = _auto_select_backend()
+                                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/curobolib/backends/__init__.py", line 125, in _auto_select_backend
+    cuda_core_modules = _try_load_cuda_core_backend()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/curobolib/backends/__init__.py", line 50, in _try_load_cuda_core_backend
+    log_and_raise(f"Error loading cuda.core backend: {e}")
+  File "/root/rivermind-data/RoboDojo/third_party/curobo/curobo/_src/util/logging.py", line 104, in log_and_raise
+    raise ValueError(txt)
+ValueError: Error loading cuda.core backend: No module named 'cuda.bindings.cynvvm'
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-10-08T13:04:25Z [20,595ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Core' for removal
+2026-10-08T13:04:25Z [20,601ms] [Warning] [omni.physx.plugin] USD stage detach not called, holding a loose ptr to a stage!
+2026-10-08T13:04:25Z [20,619ms] [Warning] [omni.fabric.plugin] gFabricState->gUsdStageToSimStageWithHistoryMap had 1 outstanding SimStageWithHistory(s) at shutdown
+2026-10-08T13:04:25Z [20,701ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+[MAIN] eval finished
+[MAIN] kill server tree 104933
+[robodojo eval] wall_clock=29s

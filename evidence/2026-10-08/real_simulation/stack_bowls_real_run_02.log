@@ -1,0 +1,32 @@
+[robodojo eval] policy_dir=/root/rivermind-data/RoboDojo/XPolicyLab/policy/demo_policy
+[robodojo eval] task=stack_bowls env_cfg=arx_x5 eval_num=1
+[33m[INFO] Using socket port: 51451[0m
+[MAIN] start server, policy_server_port=51451
+[34m[1m[CONNECTING][0m Policy server -> localhost:51451 (PID=83981, timeout=600s)
+[SERVER] policy=demo_policy, task=stack_bowls, policy_server_port=51451
+[Model] Model successfully initialized with action type: ee
+Traceback (most recent call last):
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/setup_policy_server.py", line 36, in main
+    from client_server.ws.model_server import PolicyServer, PolicyServerConfig
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/client_server/ws/__init__.py", line 7, in <module>
+    from client_server.ws.model_client import WsModelClient
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/client_server/ws/model_client.py", line 10, in <module>
+    from client_server.ws.protocol.client import PolicyEvalClient, PolicyEvalClientConfig
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/client_server/ws/protocol/__init__.py", line 1, in <module>
+    from client_server.ws.protocol.client import PolicyEvalClient, PolicyEvalClientConfig
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/client_server/ws/protocol/client.py", line 16, in <module>
+    from client_server.ws.protocol.codec import decode_envelope, encode_frame
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/client_server/ws/protocol/codec.py", line 9, in <module>
+    import msgpack_numpy
+ModuleNotFoundError: No module named 'msgpack_numpy'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/setup_policy_server.py", line 168, in <module>
+    main(deploy_cfg)
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/setup_policy_server.py", line 54, in main
+    raise RuntimeError(
+RuntimeError: ws policy server requires XPolicyLab websocket dependencies (missing module: msgpack_numpy). Install in the policy env with: pip install -e . from the XPolicyLab root.
+[31m[1m[ERROR][0m Policy server (PID=83981) exited before opening port 51451.
+[MAIN] kill server tree 83981

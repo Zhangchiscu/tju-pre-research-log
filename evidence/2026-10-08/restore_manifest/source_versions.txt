@@ -1,0 +1,18 @@
+RoboDojo main repository:
+726e9aabfaa642203722eb126f5eaf0f37f3e1ad
+
+Submodule commits recorded by RoboDojo:
+160000 commit bb9a0b5f5136a74503b679af830bfd0a3a837d5c	XPolicyLab
+160000 commit afca7b09d60d8beb9c1cb28b43066499940b969b	third_party/IsaacLab
+160000 commit d17b54ce32cba095c0b000c4c58777075d11de0e	third_party/curobo
+
+Submodule initialization status:
+-bb9a0b5f5136a74503b679af830bfd0a3a837d5c XPolicyLab
+-afca7b09d60d8beb9c1cb28b43066499940b969b third_party/IsaacLab
+-d17b54ce32cba095c0b000c4c58777075d11de0e third_party/curobo
+
+Note:
+A leading '-' in git submodule status means the submodule
+is not initialized in the current Git worktree.
+Recorded gitlink commits do not guarantee the local
+third-party working files exactly match those commits.

@@ -1,0 +1,14 @@
+annotated-types==0.8.0
+h5py==3.16.0
+msgpack==1.2.3
+msgpack-numpy==0.4.8
+numpy==1.26.0
+opencv-python-headless==4.10.0.84
+packaging==26.3
+pydantic==2.13.5
+pydantic_core==2.46.5
+PyYAML==6.0.3
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+websockets==14.2
+-e git+https://github.com/RoboDojo-Benchmark/RoboDojo.git@726e9aabfaa642203722eb126f5eaf0f37f3e1ad#egg=xpolicylab&subdirectory=XPolicyLab

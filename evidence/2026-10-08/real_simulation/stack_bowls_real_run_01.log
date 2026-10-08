@@ -1,0 +1,10 @@
+[robodojo eval] policy_dir=/root/rivermind-data/RoboDojo/XPolicyLab/policy/demo_policy
+[robodojo eval] task=stack_bowls env_cfg=arx_x5 eval_num=1
+/root/rivermind-data/RoboDojo/XPolicyLab/utils/get_free_port.sh: line 2: set: -: invalid option
+set: usage: set [-abefhkmnptuvxBCEHPT] [-o option-name] [--] [-] [arg ...]
+/root/rivermind-data/RoboDojo/XPolicyLab/utils/get_free_port.sh: line 3: $'\r': command not found
+/root/rivermind-data/RoboDojo/XPolicyLab/utils/get_free_port.sh: line 11: $'\r': command not found
+[MAIN] start server, policy_server_port=52669
+setup_eval_policy_server.sh: line 2: set: pipefail: invalid option name
+/root/rivermind-data/RoboDojo/XPolicyLab/utils/wait_for_policy_server.sh: line 6: set: pipefail: invalid option name
+[MAIN] kill server tree 82780

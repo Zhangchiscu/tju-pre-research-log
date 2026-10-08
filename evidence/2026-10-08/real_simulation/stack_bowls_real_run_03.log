@@ -1,0 +1,24 @@
+[robodojo eval] policy_dir=/root/rivermind-data/RoboDojo/XPolicyLab/policy/demo_policy
+[robodojo eval] task=stack_bowls env_cfg=arx_x5 eval_num=1
+[33m[INFO] Using socket port: 52605[0m
+[MAIN] start server, policy_server_port=52605
+[34m[1m[CONNECTING][0m Policy server -> localhost:52605 (PID=86610, timeout=600s)
+[SERVER] policy=demo_policy, task=stack_bowls, policy_server_port=52605
+[Model] Model successfully initialized with action type: ee
+Traceback (most recent call last):
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/setup_policy_server.py", line 36, in main
+    from client_server.ws.model_server import PolicyServer, PolicyServerConfig
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/client_server/ws/model_server.py", line 18, in <module>
+    from websockets.asyncio.server import Server, ServerConnection, serve
+ModuleNotFoundError: No module named 'websockets.asyncio'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/setup_policy_server.py", line 168, in <module>
+    main(deploy_cfg)
+  File "/root/rivermind-data/RoboDojo/XPolicyLab/setup_policy_server.py", line 54, in main
+    raise RuntimeError(
+RuntimeError: ws policy server requires XPolicyLab websocket dependencies (missing module: websockets.asyncio). Install in the policy env with: pip install -e . from the XPolicyLab root.
+[31m[1m[ERROR][0m Policy server (PID=86610) exited before opening port 52605.
+[MAIN] kill server tree 86610

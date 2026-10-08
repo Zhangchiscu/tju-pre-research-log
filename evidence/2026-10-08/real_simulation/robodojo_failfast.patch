@@ -1,0 +1,13 @@
+diff --git a/src/eval_client/main.py b/src/eval_client/main.py
+index d0c2c90..4fcbd01 100644
+--- a/src/eval_client/main.py
++++ b/src/eval_client/main.py
+@@ -383,6 +383,8 @@ def main():
+                 flush=True,
+             )
+             traceback.print_exc()
++            if os.environ.get("ROBODOJO_FAIL_FAST") == "1":
++                raise
+             if enable_monitor and get_monitor().is_fatal():
+                 fatal_msg = get_monitor().get_fatal_message() or str(e)
+                 if get_monitor().requires_shell_restart():

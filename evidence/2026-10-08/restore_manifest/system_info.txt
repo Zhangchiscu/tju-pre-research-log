@@ -1,0 +1,5 @@
+2026-10-08T22:12:09+08:00
+Linux 5.15.0-161-generic x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+NVIDIA GeForce RTX 3090, 580.119.02, 24576 MiB
+ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
