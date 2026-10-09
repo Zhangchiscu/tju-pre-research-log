@@ -1,7 +1,6 @@
 # RoboDojo `stack_bowls` 任务配置与评价方式
 
-> 状态：**源码审查完成；尚未完成 Isaac Sim 物理仿真。**  
-> 依据：本机主仓库 Commit `726e9aabfaa642203722eb126f5eaf0f37f3e1ad`；XPolicyLab 子模块 `bb9a0b5f5136a74503b679af830bfd0a3a837d5c`。再次部署前以本机 `git rev-parse HEAD`、`git submodule status` 核对一致性。
+> 本文整理的是 RoboDojo 任务源码和配置。源码版本为 `726e9aabfaa642203722eb126f5eaf0f37f3e1ad`，主仓库记录的 XPolicyLab 子模块版本为 `bb9a0b5f5136a74503b679af830bfd0a3a837d5c`。本次实际仿真情况另见 [运行记录](REAL_SIMULATION_RUNBOOK.md)。
 
 ## 1. 任务定义
 
@@ -42,7 +41,7 @@
 | `score` | 各回合得分平均值乘 100，通常为 0～100 | 成功回合按 1.0；失败回合可有部分得分 |
 | `details` | 按回合编号索引的明细，包含 `layout_id`、`success`、`score` | 明细 `score` 为 0～1 的单回合归一化得分 |
 
-`layout_id` 是布局标识，不是 3 个碗的 XYZ 坐标。要研究“初始位置分散度”，必须额外取得与 `layout_id` 对应的真实物体初始位置，不能只用 `_result.json` 直接计算。
+`layout_id` 是布局标识，不是 3 个碗的 XYZ 坐标。本次保存的 `_result.json` 不包含三个碗的实际初始坐标。
 
 ## 5. 标准任务与 `_random` 变体不是单因素对照
 
@@ -54,13 +53,13 @@
 | 禁放区域 | 无对应 YAML 段 | 包含 `ProhibitedArea` |
 | 评分与成功代码 | 对应官方标准任务代码 | 对应官方 random 任务代码 |
 
-所以即便以后两个任务都能跑通，它们的成功率差异也**不能直接归因于初始位置变化**。正式研究应优先锁定相同任务、相同物体集合、相同基线，并按已记录的布局变量进行分组。
+这两个任务的碗模型候选和杂物配置不同，因此不能简单地把两个任务的得分差异归因于某一个变量。
 
-## 6. 当前已完成和未完成
+## 6. 检查与运行情况
 
-**已完成**：本机 PyTorch/CUDA 检查；离线策略控制循环；`demo_policy` Joint/EE 动作接口检查；真实 XPolicyLab WebSocket 客户端与服务器通信；Git 版本与依赖清单记录。
+完成过本机 PyTorch/CUDA 检查、离线策略控制循环、`demo_policy` Joint/EE 动作接口检查、XPolicyLab WebSocket 客户端与服务器通信，以及 Git 版本和依赖记录。
 
-**未完成**：Isaac Sim/Isaac Lab 运行；Assets/场景加载；机械臂真实物理控制；`stack_bowls` 运行视频和 `_result.json`；具备操作能力的策略基线与真实布局坐标提取。
+随后在云服务器运行了 Isaac Sim / Isaac Lab，完成一次 `stack_bowls` 仿真评测，保存了三路视频和 `_result.json`。本次使用的示例策略没有完成叠碗操作，结果记录见 [仿真运行记录](REAL_SIMULATION_RUNBOOK.md)。
 
 ## 7. 原始源码位置
 
@@ -76,4 +75,4 @@ RoboDojo/
 └── src/eval_client/eval_env.py
 ```
 
-> 文档仅描述经源码检查的事实；环境完整可复现还需要 GPU 服务器的实际安装记录、运行命令和结果文件。
+> 任务参数以所记录版本的源码为依据，运行结果以实际日志和评测文件为准。
