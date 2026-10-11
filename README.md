@@ -9,7 +9,7 @@
 ## 二、第一次查看，可以从这里开始
 
 - **想了解做了什么**：看 [科研工作记录](daily/2026-10-08_科研工作记录.md)，是一份简短记录。
-- **想知道仿真结果**：看 [评测结果 JSON](evidence/2026-10-08/real_simulation/_result.json)、[最终运行日志](evidence/2026-10-08/real_simulation/stack_bowls_real_run_08.log) 和 [三个相机视频所在文件夹](evidence/2026-10-08/real_simulation/)。
+- **想知道仿真结果**：看 [评测结果 JSON](evidence/2026-10-08/real_simulation/_result.json)、[最终运行日志](evidence/2026-10-08/real_simulation/stack_bowls_real_run_08.log) 和 [三路相机视频说明](evidence/2026-10-08/real_simulation/README.md)。
 - **想了解任务要求**：看 [叠碗任务配置与评价说明](docs/叠碗任务配置与评价说明.md)。
 - **想了解当时的部署环境**：看 [仿真运行记录](docs/仿真运行记录.md) 和 [云服务器环境恢复说明](docs/云服务器环境恢复说明.md)。
 
