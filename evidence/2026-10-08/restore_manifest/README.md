@@ -1,14 +1,16 @@
 # 云服务器环境资料
 
-保留当时运行 RoboDojo 示例仿真所需的主要版本信息。这里只是版本记录，不含完整 Isaac Sim 安装包或系统镜像。
+这个文件夹只保留当时运行仿真相关的系统信息、源码版本和两套软件环境清单。
 
 | 文件 | 主要内容 |
 | --- | --- |
-| [`system_info.txt`](system_info.txt) | Ubuntu、RTX 3090、显卡驱动和 FFmpeg 版本。 |
-| [`source_versions.txt`](source_versions.txt) | RoboDojo 主仓库及 XPolicyLab、Isaac Lab、CuRobo 的源码版本与子模块状态。 |
-| [`isaaclab_conda.txt`](isaaclab_conda.txt) | 运行仿真客户端的 `isaaclab` 环境软件包列表。 |
-| [`xpolicy_demo_pip_freeze.txt`](xpolicy_demo_pip_freeze.txt) | 运行示例策略服务的 `xpolicy_demo` 环境 Python 依赖及安装来源。 |
+| [`system_info.txt`](system_info.txt) | Ubuntu 24.04.1、RTX 3090、显卡驱动及 FFmpeg 版本。 |
+| [`source_versions.txt`](source_versions.txt) | RoboDojo 主仓库与 XPolicyLab、Isaac Lab、CuRobo 的源码版本和子模块状态。 |
+| [`isaaclab_conda.txt`](isaaclab_conda.txt) | 用于仿真端的 `isaaclab` Conda 环境包清单。 |
+| [`isaaclab_pip_freeze.txt`](isaaclab_pip_freeze.txt) | 仿真端 Python 包版本表，包括 CUDA 绑定相关版本。 |
+| [`xpolicy_demo_conda.txt`](xpolicy_demo_conda.txt) | 用于示例策略服务器的 `xpolicy_demo` Conda 环境清单。 |
+| [`xpolicy_demo_pip_freeze.txt`](xpolicy_demo_pip_freeze.txt) | 策略服务器 Python 依赖清单，包括 WebSocket 等相关依赖。 |
 
-为了减少重复版本文件，当前只保留上述主要清单。需要精确比对原始完整依赖时，其他清单可通过 Git 历史找回。
+Conda 清单与 pip 清单都保留，是因为它们记录的信息并不完全一样。这里没有安装包或完整系统镜像。
 
-三个大型资源备份压缩包不在 GitHub，相关名称和位置见 [云服务器环境恢复说明](../../../docs/云服务器环境恢复说明.md)。
+当时的三个大型资源备份压缩包保存在 Windows 本地，没有上传 GitHub。关于备份和恢复路径，可查看 [云服务器环境恢复说明](../../../docs/云服务器环境恢复说明.md)。
